@@ -1,26 +1,9 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import { FC } from "react";
+// functioncomponent 타입 함수형 컴포넌트에서 렌더링이 되지않으면 충족이되지않음.
+const App: FC = () => {
+  return <div className="bg-red-100">Hello, TS!</div>;
+};
 
 export default App;
+
+// ()=>JSX.Element 는 FC의 확장 타입은 최대한 좁혀서 사용해주는것이 좋음.
